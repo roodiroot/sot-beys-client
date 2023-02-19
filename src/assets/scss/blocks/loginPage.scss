@@ -1,0 +1,38 @@
+.login {
+    &__contanier {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+}
+.boxLoginPanel {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+
+    &__title {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.7rem;
+        letter-spacing: 0.005em;
+        color: #272727;
+        margin-bottom: 1.8rem;
+    }
+    &__bottomRow {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__text {
+        flex: 1 1 70%;
+        align-self: start;
+        span {
+            color: #1c1b4a;
+            text-decoration: underline;
+        }
+
+    }
+}

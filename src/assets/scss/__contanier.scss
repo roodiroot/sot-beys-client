@@ -1,0 +1,12 @@
+%setcon {
+    margin: 0 auto;
+    max-width: $WidthContanier + px;
+    padding: 0 $contanierPadding + px;
+}
+[class*="__contanier"] {
+    @extend %setcon;
+}
+[class*="-pageBody"] {
+    flex: 1 1 auto;
+    padding: 3.3rem 5px;
+}

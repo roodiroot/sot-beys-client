@@ -1,0 +1,111 @@
+.typePresent {
+
+    /* .typePresent__contanier */
+
+    &__contanier {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    /* .typePresent__title */
+
+    &__title {
+        padding: 5px;
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2.9rem;
+        line-height: 1.5em;
+        text-align: center;
+        letter-spacing: 0.145em;
+        text-transform: uppercase;
+        color: #272727;
+
+        margin-bottom: 1.7rem;
+    }
+
+    /* .typePresent__area */
+
+    &__area {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 25% 25% 25% 25%;
+        @media (max-width: 1200px) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        @media (max-width: 700px) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media (max-width: 400px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* .typePresent__cardBody */
+
+    &__cardBody {
+    }
+}
+
+.cardBodyType {
+    width: 100%;
+    height: 34rem;
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (max-width: 400px) {
+        width: 100%;
+    }
+
+    /* .cardBodyType__imgBlock */
+
+    &__imgBlock {
+        position: relative;
+        width: 100%;
+        height: 25.5rem;
+        background: rgb(218, 218, 218);
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    /* .cardBodyType__contentBlock */
+
+    &__contentBlock {
+        padding: 1rem .5rem .1rem;
+        text-align: center;
+    }
+
+    /* .cardBodyType__title */
+
+    &__title {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.1rem;
+        line-height: 1.2em;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #141414;
+        margin-bottom: .2rem;
+    }
+
+    /* .cardBodyType__price */
+
+    &__price {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 1rem;
+        line-height: 1.5em;
+        text-align: center;
+        letter-spacing: 0.025em;
+        color: #595959;
+    }
+}

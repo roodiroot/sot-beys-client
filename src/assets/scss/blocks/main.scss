@@ -1,0 +1,765 @@
+.main {
+    order: 2;
+
+    /* .main__lents */
+
+    &__lents {
+    }
+
+    /* .main__collection */
+
+    &__collection {
+    }
+
+     /* .main__presentCollection */
+
+     &__presentCollection {
+    }
+
+     /* .main__benifitsBlock */
+
+     &__benifitsBlock {
+        margin-bottom: 2rem;
+    }
+
+     /* .main__lentPresent */
+
+     &__lentPresent {
+        margin-bottom: 2rem;
+    }
+
+    /* .main__fedbackForm */
+
+    &__fedbackForm {
+    }
+
+    &__socialAndPyment {
+        margin-top: 1.3rem;
+    }
+}
+.lents {
+    width: 100%;
+    height: 70px;
+    background: #282828;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    /* .lents__block */
+
+    &__block {
+        flex: 1 1 auto;
+        text-align: center;
+        padding: 10px 10px;
+        font-size: 0.93rem;
+        color: #fff;
+        font-size: 12px;
+        letter-spacing: 0.09em;
+        @media (max-width: 1000px) {
+           &:first-child, &:last-child {
+            display: none;
+           }
+        }
+        @media (max-width: 500px) {
+            font-size: 10px;
+        }
+    }
+
+    /* .lents__header */
+
+    &__header {
+        display: block;
+        text-transform: uppercase;
+
+    }
+
+    /* .lents__description */
+
+    &__description {
+    }
+}
+
+// =============MAIN IMG =======================
+.mainPage {
+
+   
+
+    width: 100%;
+    height: 50rem;
+    background: url(../../img/bg/main.png) center / cover no-repeat;
+
+    &__contanier {
+        max-width: 900px;
+        padding: 5px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+   
+    &__content {
+        position: relative;
+        // display: flex;
+        // flex-direction: column;
+        max-width: 540px;
+        padding: 9px;
+        text-align: center;
+    }
+
+     /* .main__logo */
+
+    &__logo {
+        font-size: 8rem;
+        margin-bottom: 1.3rem;
+        color: #fff;
+    }
+
+    /* .main__title */
+
+    &__title {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 3.23rem;
+        line-height: 130%;
+        letter-spacing: 0.075em;
+        color: #FFFFFF;
+        margin-bottom: 1rem;
+    }
+
+    /* .main__description */
+
+    &__description {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.6rem;
+        letter-spacing: 0.09em;
+        color: #FFFFFF;
+        margin-bottom: 1rem;
+    }
+
+}
+
+//================ NEW ITEMS ===========================================
+
+.newItems {
+    padding: 5.3rem 4.23rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    @media  (max-width: 1000px) {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 0;
+    }
+
+
+    /* .newItems__block */
+
+    &__block {
+        position: relative;
+        height: 42rem;
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+
+        &:nth-child(1) {
+            background: url(../../img/newItems/Maskgroup.png) center / cover no-repeat;
+        }
+        &:nth-child(2) {
+            background: #282828;
+        }
+        &:nth-child(3) {
+            background: url(../../img/newItems/Mask2.png) center / cover no-repeat;
+        }
+        @media  (max-width: 1000px) {
+            width: 100%;;
+        }
+        
+    }
+    &__body {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+    }
+    &__title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 4.4rem;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 1.7rem;
+
+    }
+    &__description {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2.92rem;
+        text-align: center;
+        line-height: 1.31em;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: #3D95B6;
+
+    }
+    &__italic {
+        font-family: 'Montserrat';
+        font-style: italic;
+        font-weight: 400;
+        font-size: 0.93rem;
+        line-height: 1.2em;
+        text-align: center;
+        letter-spacing: 0.15em;
+        color: #FFFFFF;
+        margin-bottom: 2em;
+
+    }
+    &__italicDescription {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 1.4em;
+    }
+    &__buttonCircle {
+        background: #3D95B6;
+    }
+}
+
+// ============== COLECTION ============================
+
+
+.collection {
+    padding: 5rem 12rem;
+    background: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (max-width: 1000px) {
+        padding: 1rem;
+
+    }
+
+    /* .collection__title */
+
+    &__title {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 3rem;
+        line-height: 1.3em;
+        letter-spacing: 0.15em;
+        color: #272727;
+        margin-bottom: 1em;
+        text-align: center;
+    }
+
+    /* .collection__list */
+
+    &__list {
+        width: 100%;
+        padding: 5px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 2rem;
+        row-gap: 4rem;
+
+        @media (max-width:1000px) {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+
+    }
+
+    /* .collection__itemCard */
+
+    &__itemCard {
+        position: relative;
+        flex: 1 1 auto;
+        height: 30rem;
+        background: #000;
+
+        &:nth-child(1){
+            background: url(../../img/collection/card.png) center / cover no-repeat ; 
+        }
+        &:nth-child(2){
+            background: url(../../img/collection/card2.png) center / cover no-repeat ; 
+        }
+        &:nth-child(3){
+            background: url(../../img/collection/card3.png) center / cover no-repeat ; 
+        }
+        &:nth-child(4){
+            background: url(../../img/collection/card4.png) center / cover no-repeat ; 
+        }
+        &:nth-child(5){
+            background: url(../../img/collection/card5.png) center / cover no-repeat ; 
+        }
+        &:nth-child(6){
+            background: url(../../img/collection/card6.png) center / cover no-repeat ; 
+        }
+        &:nth-child(7){
+            background: url(../../img/collection/card7.png) center / cover no-repeat ;
+        }
+        &:nth-child(8){
+            background: #282828 ; 
+        }
+
+    }
+
+    /* .collection__buttonDeg */
+
+    &__buttonDeg {
+        position: absolute;
+        bottom: 5%;
+        left: -10%;
+    }
+}
+
+// ==================== PRESENT COLLECTION ========================
+
+.presentCollection {
+    position: relative;
+    height: 390px;
+    padding: 5rem 12rem;
+    background: #FAFAFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 1000px) {
+        flex-direction: column;
+        padding: 0;
+    }
+    
+
+    /* .presentCollection__left */
+
+    &__left,  &__right {
+        height: 100%;
+        width: 50%;
+        @media (max-width: 1000px) {
+            width: 100%;
+        }
+    }
+        /* .presentCollection__right */
+
+        &__right {
+            right: 0;
+            background: url(../../img/bioCollection/orange1.png) center / cover no-repeat;
+        }
+        &__left {
+            left: 0;
+            background: url(../../img/bioCollection/orange21.png) center / cover no-repeat;
+        }
+
+    /* .presentCollection__body */
+
+    &__body {
+        position: absolute;
+        text-align: center;
+
+    }
+
+    /* .presentCollection__title */
+
+    &__title {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 4.4rem;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 1rem;
+        @media (max-width: 320px) {
+            font-size: 3.7rem;
+        }
+    }
+
+    /* .presentCollection__description */
+
+    &__description {
+        font-family: 'Montserrat';
+        font-style: italic;
+        font-weight: 500;
+        font-size: 2.5rem;
+        line-height: 39px;
+        letter-spacing: 0.12em;
+        color: #000000;
+        margin-bottom: 1rem;
+    }
+
+    /* .presentCollection__button */
+
+    &__button {
+        background: #9E1DDB;
+    }
+
+}
+
+// =============== BENIFITS BLOCK ================
+
+.benifitsBlock {
+    padding: 1rem 9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 1000px) {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 2rem;
+    }
+
+    /* .benifitsBlock__item */
+
+    &__item {
+        position: relative;
+        flex: 1 1 auto;
+        text-align: center;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+        &:nth-child(2) {
+            &::after, &::before {
+                position: absolute;
+                content: '';
+                width: 1px;
+                height: 145px;
+                background:  #D9D9D9;
+                top: 50%;
+                transform: translateY(-50%);
+                @media (max-width: 1000px) {
+                    width: 145px;
+                    height: 1px;
+                    top: unset;
+                    transform: unset;
+                    
+                }
+            }
+            &::after {
+                left: 0;
+                @media (max-width: 1000px) {
+                    left: 50%;
+                    top: 0;
+                    transform: translateX(-50%);
+                }
+            }
+            &::before {
+                right: 0;
+                @media (max-width: 1000px) {
+                    bottom: 0;
+                    right: 50%;
+                    transform: translateX(50%);
+                }
+            }
+            
+        }
+        
+    }
+    &__body {
+        max-width: 350px;
+    }
+
+    /* .benifitsBlock__logo */
+
+    &__logo {
+        font-size: 3rem;
+        margin-bottom: 2.5rem;
+    }
+
+    /* .benifitsBlock__title */
+
+    &__title {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.3em;
+        text-align: center;
+        letter-spacing: 0.09em;
+        color: #141414;
+
+        margin-bottom: 1rem;
+    }
+
+    /* .benifitsBlock__text */
+
+    &__text {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.1rem;
+        line-height: 1.5em;
+        text-align: center;
+        letter-spacing: 0.09em;
+        color: #141414;
+        margin-bottom: 2rem;
+    }
+
+    /* .benifitsBlock__buttonMore */
+
+    &__buttonMore {
+        font-family: 'Nunito';
+        font-style: italic;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height:1.5em;
+        text-align: center;
+        letter-spacing: 0.09em;
+        text-decoration-line: underline;
+        color: #141414;
+
+        cursor: pointer;
+    }
+}
+
+// ============= LENT PRESENT ================
+
+.lentPresent {
+    height: 290px;
+    background: url(../../img/lentPresent/width.png) center / cover no-repeat;
+
+    /* .lentPresent_button */
+
+    &_button {
+    }
+
+    /* .lentPresent__contanier */
+
+    &__contanier {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    /* .lentPresent__body */
+
+    &__body {
+    }
+
+    /* .lentPresent__title */
+
+    &__title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 3.6rem;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 1.2rem;
+    }
+
+    /* .lentPresent__description */
+
+    &__description {
+        font-family: 'Montserrat';
+        font-style: italic;
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 101.9%;
+        letter-spacing: 0.12em;
+        color: #FFFFFF;
+        margin-bottom: 2.5rem;
+    }
+}
+
+// ========= FEEDBACK FORM ========================
+
+.fedbackForm {
+    background: #282828;
+
+    /* .fedbackForm__contanier */
+
+    &__contanier {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3.5rem 1rem;
+
+        @media (max-width: 1000px) {
+            flex-direction: column;
+            gap: 2rem;
+        }
+    }
+
+    /* .fedbackForm__text */
+
+    &__text {
+        max-width: 437px;
+        @media (max-width: 1000px) {
+            max-width: 100%;
+        }
+    }
+
+    /* .fedbackForm__title */
+
+    &__title {
+        font-family: 'Montserrat';
+        font-style: italic;
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 101.9%;
+        letter-spacing: 0.12em;
+        color: #FFFFFF;
+        margin-bottom: 1rem;
+    }
+
+    /* .fedbackForm__subTitle */
+
+    &__subTitle {
+        font-family: 'Montserrat';
+        font-style: italic;
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 139.9%;
+        letter-spacing: 0.12em; 
+        color: #FFFFFF;
+    }
+
+    /* .fedbackForm__form */
+
+    &__form {
+        min-width: 437px;
+        @media (max-width: 1000px) {
+            min-width: 100%;
+        }
+    }
+
+    /* .fedbackForm__input */
+
+    &__input {
+        width: 100%;
+        margin-bottom: 1.3rem;
+
+    }
+
+    /* .fedbackForm__button */
+
+    &__button {
+        width: 100%;
+        background: #fff;
+        color: #000;
+
+        &:hover {
+            background: rgb(109, 154, 245);
+        }
+    }
+}
+.inputFormCvadro {
+
+    /* .inputFormCvadro__legend */
+
+    &__legend {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        letter-spacing: 0.045em;
+        color: #ffffffde;
+        margin-bottom: 0.5rem;
+    }
+
+    /* .inputFormCvadro__input */
+
+    &__input {
+        width: 100%;
+        display: inline-block;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.93rem;
+        letter-spacing: 0.15em;
+        color: #3d3d3d;
+        padding: 1rem;
+        background: #ffffff;
+        &::placeholder {
+            font-family: 'Montserrat';
+            font-style: italic;
+            font-weight: 400;
+            font-size: 1rem;
+            letter-spacing: 0.045em;
+            color: #5F5F5F;
+        }
+        
+    }
+}
+.buttonCvadro {
+}
+
+// ================ SOCIAL AND PYMENTS ===============
+.socialAndPyment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    border-top: #D9D9D9 solid 1px;
+    padding: 2.6rem 1rem;
+    @media (max-width: 800px) {
+        gap: 5rem;
+    }
+    
+
+
+
+    /* .socialAndPyment__social */
+
+    &__social,  &__pyments {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        @media (max-width: 500px) {
+            gap: 1rem;
+        }
+    }
+
+    &__social {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 100%;
+        letter-spacing: 0.015em;
+        text-transform: uppercase;
+        color: #131313;
+        cursor: pointer;
+    }
+
+    /* .socialAndPyment__link */
+
+    &__link {
+        &::before {
+            font-size: 1.6rem;
+        }
+    }
+
+    /* .socialAndPyment__pyments */
+
+    &__pyments {
+        img {
+            object-fit: contain;
+        }
+    }
+}
+

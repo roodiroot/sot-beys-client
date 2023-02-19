@@ -1,0 +1,38 @@
+.adminPanel {
+
+    &__contanier {
+        max-width: 900px;
+        display: flex;
+        flex-direction: column;
+        gap: 7rem;
+    }
+    &__addBlock {
+
+        .adminPanel__title {
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 2.3rem;
+            letter-spacing: 0.005em;
+            color: #272727;
+
+            margin-bottom: 1.5rem;
+            
+        }
+        .infoList {
+            padding: 0 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .infoLine {
+            display: flex;
+            align-items: center;
+           gap: 2rem;
+           justify-content: space-between;
+        }
+
+    }
+    
+}

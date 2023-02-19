@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import classNames from 'classnames';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import CartMomentum from './components/CartMomentum';
+import FooterComponent from './components/FooterComponent';
+import HeaderComponent from './components/HeaderComponent';
+import PopapComentComponent from './components/popaps/PopapComentComponent';
+import RouterApp from './components/RouterApp';
+import { checkUserAPI } from './features/user/userSlice';
 
 function App() {
+  const dispatch = useDispatch();
+  const [loading, setLoading] = useState(true);
+  const { variant } = useSelector((state) => state.popap);
+  useEffect(() => {
+    dispatch(checkUserAPI()).then((i) => setLoading(false));
+  }, [dispatch]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className={classNames('loadingSpinner', { active: loading })}></div>
+      <HeaderComponent />
+      <RouterApp />
+      <FooterComponent />
+      <CartMomentum />
+      <PopapComentComponent variant={variant} />
     </div>
   );
 }
