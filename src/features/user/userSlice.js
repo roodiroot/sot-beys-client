@@ -1,5 +1,5 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { check, login, registration } from '../../http/userApi';
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { check, login, registration } from "../../http/userApi";
 
 const initialState = {
   isAuth: false,
@@ -7,7 +7,7 @@ const initialState = {
 };
 
 export const registerUserAPI = createAsyncThunk(
-  'user/registerUser',
+  "user/registerUser",
   async (body, { rejectWithValue, dispatch }) => {
     try {
       const data = await registration(body.email, body.password);
@@ -16,10 +16,10 @@ export const registerUserAPI = createAsyncThunk(
     } catch (error) {
       alert(error.response.data.message);
     }
-  },
+  }
 );
 export const loginUserAPI = createAsyncThunk(
-  'user/loginUserAPI',
+  "user/loginUserAPI",
   async (body, { rejectWithValue, dispatch }) => {
     try {
       const data = await login(body.email, body.password);
@@ -28,10 +28,10 @@ export const loginUserAPI = createAsyncThunk(
     } catch (error) {
       alert(error.response.data.message);
     }
-  },
+  }
 );
 export const checkUserAPI = createAsyncThunk(
-  'user/loginUserAPI',
+  "user/loginUserAPI",
   async (_, { rejectWithValue, dispatch }) => {
     try {
       const data = await check();
@@ -42,11 +42,11 @@ export const checkUserAPI = createAsyncThunk(
     } catch (error) {
       // alert(error.response.data.message);
     }
-  },
+  }
 );
 
 const userSlice = createSlice({
-  name: 'user',
+  name: "user",
   initialState,
   reducers: {
     setIsAuth: (state, action) => {

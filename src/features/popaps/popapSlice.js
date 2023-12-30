@@ -1,11 +1,11 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   fold: true,
-  variant: '',
+  variant: "",
 };
 const popapSlice = createSlice({
-  name: 'slice',
+  name: "slice",
   initialState,
   reducers: {
     showPopap: (state, action) => {

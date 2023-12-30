@@ -1,5 +1,5 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { getCategory } from '../../http/categoryApi';
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { getCategory } from "../../http/categoryApi";
 
 const initialState = {
   categories: [],
@@ -8,21 +8,23 @@ const initialState = {
 };
 
 export const getCategoryAPI = createAsyncThunk(
-  'category/getCategoryAPI',
+  "category/getCategoryAPI",
   async (_, { rejectWithValue, dispatch }) => {
     try {
       const data = await getCategory();
       dispatch(setCategoryes(data));
-    } catch (error) {}
-  },
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
 );
 
 const categorySlice = createSlice({
-  name: 'category',
+  name: "category",
   initialState,
   reducers: {
     setCategoryes: (state, action) => {
-      state.categories = action.payload;
+      state.categories = action.payload.data;
     },
     setSelectedCategory: (state, action) => {
       state.selectedCategory = action.payload;
@@ -40,10 +42,11 @@ const categorySlice = createSlice({
     },
     [getCategoryAPI.rejected]: (state) => {
       state.loadingCategory = true;
-      alert({ message: 'ошибка загрузки каталога' });
+      alert({ message: "ошибка загрузки каталога" });
     },
   },
 });
 
-export const { setCategoryes, setSelectedCategory, loadingAction } = categorySlice.actions;
+export const { setCategoryes, setSelectedCategory, loadingAction } =
+  categorySlice.actions;
 export default categorySlice.reducer;

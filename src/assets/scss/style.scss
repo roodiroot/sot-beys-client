@@ -2,25 +2,21 @@
 
 @import "fonts";
 
-
 // ---------------------------------------------  ОБНУЛЯЮЩИЙ стиль подключение
 
 @import "__null";
-
 
 // ----------------------------------------------  подключение иконочных ШРИФТов
 
 @import "__icons";
 
-
 //-----------------------------------------------  !!! ЦВЕТА ПРОЕКТА !!!
 @import "__main-colorfonts";
 
 //----------------------------------------------- Настройки основного ШРИФТА
-$fontFamily: Montserrat; 
+$fontFamily: Montserrat;
 $fontSize: 13px;
 // $mainColor: #B5B5B5;
-
 
 //---------------------------------------------------------------------
 
@@ -33,10 +29,7 @@ $WidthContanier: $maxWidthContanier + $contanierPadding * 2;
 
 // ----------------------------------------------- подключение настроек основнова КОНТЕЙНЕРА
 
-
 @import "__contanier";
-
-
 
 // $pc: em($maxWidthContanier + $contanierPadding);
 // $tablet: 991.98px;
@@ -46,36 +39,34 @@ $WidthContanier: $maxWidthContanier + $contanierPadding * 2;
 //     outline:1px solid red;
 // }
 html {
-     font-size: $fontSize;
-     @media (max-width: 1200px) {
-        font-size: calc(8px + (13 - 8) * (100vw - 320px) / (1200 - 320))
-    }
-     
-     }
+  font-size: $fontSize;
+  @media (max-width: 1200px) {
+    font-size: calc(8px + (13 - 8) * (100vw - 320px) / (1200 - 320));
+  }
+}
 body {
-    font-family: $fontFamily;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1rem;
-    background: #ffffff;
-    color: $colorFont;
+  font-family: $fontFamily;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  background: #ffffff;
+  color: $colorFont;
 
+  display: flex;
+  flex-direction: column;
+  #root {
+    height: 100%;
+  }
+  .App {
+    position: relative;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
-    #root {
-        height: 100%
-    }
-    .App {
-        position: relative;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
+    justify-content: space-between;
+  }
 }
 
 @import "./blocks/modules";
-
 
 @import "./blocks/header.scss";
 @import "./blocks/footer.scss";
@@ -91,4 +82,4 @@ body {
 @import "./blocks/adminPage.scss";
 @import "./blocks/popap.scss";
 @import "./blocks/loaderItems.scss";
-
+@import "./blocks/policy.scss";

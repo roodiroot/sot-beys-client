@@ -1,5 +1,5 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { getBrandLIne } from '../../http/brandLineApi';
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { getBrandLIne } from "../../http/brandLineApi";
 
 const initialState = {
   brandLines: [],
@@ -7,15 +7,15 @@ const initialState = {
 };
 
 export const getBrandLineAPI = createAsyncThunk(
-  'brandLine/getBrandLineAPI',
+  "brandLine/getBrandLineAPI",
   async (_, { dispatch }) => {
     const data = await getBrandLIne();
-    dispatch(setBrandLine(data));
-  },
+    dispatch(setBrandLine(data?.data));
+  }
 );
 
 const brandLineSlice = createSlice({
-  name: 'brandLine',
+  name: "brandLine",
   initialState,
   reducers: {
     setBrandLine: (state, action) => {

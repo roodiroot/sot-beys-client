@@ -1,10 +1,17 @@
-import classNames from 'classnames';
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { setSelectedBrandLine } from '../../features/brand-line/brandLineSlice';
+import classNames from "classnames";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 
-function SelectInputComponent({ style, selected, children, arrey, value, selectedStore }) {
-  value = value || 'Выберете один из пунктов';
+function SelectInputComponent({
+  style,
+  selected,
+  children,
+  arrey,
+  value,
+  selectedStore,
+  keyName,
+}) {
+  value = value || "Выберете один из пунктов";
   const [activeList, setActiveList] = useState(false);
   const dispatch = useDispatch();
   const selectedSize = (s) => {
@@ -13,14 +20,24 @@ function SelectInputComponent({ style, selected, children, arrey, value, selecte
   };
 
   return (
-    <div style={style} onClick={(e) => setActiveList(!activeList)} className="selectCastom">
-      <legend className="selectCastom__legend">{children}</legend>
-      <div className="selectCastom__body">
-        <div className="selectCastom__main">{value}</div>
-        <div className={classNames('selectCastom__select', { active: activeList })}>
+    <div
+      style={style}
+      onClick={(e) => setActiveList(!activeList)}
+      className='selectCastom'
+    >
+      <legend className='selectCastom__legend'>{children}</legend>
+      <div className='selectCastom__body'>
+        <div className='selectCastom__main'>{value}</div>
+        <div
+          className={classNames("selectCastom__select", { active: activeList })}
+        >
           {arrey?.map((s) => (
-            <div key={s.name} onClick={(e) => selectedSize(s)} className="selectCastom__variatn">
-              {s.name}
+            <div
+              key={s[keyName] ? s[keyName] : s?.name}
+              onClick={(e) => selectedSize(s)}
+              className='selectCastom__variatn'
+            >
+              {s[keyName] ? s[keyName] : s?.name}
             </div>
           ))}
         </div>

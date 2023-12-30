@@ -1,5 +1,5 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { getProductItems } from '../../http/productApi';
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { getProductItems } from "../../http/productApi";
 
 const initialState = {
   productList: [],
@@ -8,21 +8,31 @@ const initialState = {
 };
 
 export const getProductsAPI = createAsyncThunk(
-  'productsWorking/getProductsAPI',
+  "productsWorking/getProductsAPI",
   async (params, { rejectWithValue, dispatch }) => {
+    // console.log(params);
     try {
-      const data = await getProductItems(params.categoryId, params.brandLineId);
-      dispatch(setProducts(data.rows));
-    } catch (error) {}
-  },
+      const data = await getProductItems({
+        categoryId: params?.categoryId,
+        brandLineId: params?.brandLineId,
+        modelId: params?.modelId,
+        pagination: params?.pagination,
+        sort: params?.sort,
+      });
+      // console.log(data);
+      dispatch(setProducts(data.data));
+    } catch (error) {
+      console.log(error);
+    }
+  }
 );
 
 const productSlice = createSlice({
-  name: 'productsWorking',
+  name: "productsWorking",
   initialState,
   reducers: {
     setProducts: (state, action) => {
-      state.productList = action.payload;
+      state.productList = action?.payload;
     },
     setSelectedProduct: (state, action) => {
       state.selectedProduct = action.payload;
@@ -37,7 +47,7 @@ const productSlice = createSlice({
     },
     [getProductsAPI.rejected]: (state) => {
       state.loadingProducts = false;
-      alert({ message: 'ошибка загрузки каталога' });
+      alert({ message: "ошибка загрузки каталога" });
     },
   },
 });

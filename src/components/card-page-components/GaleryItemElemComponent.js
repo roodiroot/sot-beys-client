@@ -1,7 +1,6 @@
-import classNames from 'classnames';
-import React, { useEffect, useState } from 'react';
-import { deleteItemBasket } from '../../features/basket/basketSlice';
-import { getOneProductItems } from '../../http/productApi';
+import classNames from "classnames";
+import React, { useState } from "react";
+import ImgLazy from "../new-components/img-lazy/img-lazy";
 
 function GaleryItemElemComponent({ selectItem }) {
   const [activeImg, setActiveImg] = useState(selectItem[0]);
@@ -11,36 +10,22 @@ function GaleryItemElemComponent({ selectItem }) {
   };
 
   return (
-    <div className="cardItem__photoBlock photoBlock">
-      <div className="photoBlock__galery">
+    <div className='cardItem__photoBlock photoBlock'>
+      <div className='photoBlock__galery'>
         {selectItem?.map((img, index) => (
           <div
             key={index}
             onClick={(e) => mainImg(index)}
-            className={classNames('photoBlock__galeryItem', {
+            className={classNames("photoBlock__galeryItem", {
               active: img === activeImg,
-            })}>
-            <picture>
-              <source
-                srcSet={process.env.REACT_APP_API_URL + '/' + img + '.min.webp'}
-                type="image/webp"
-              />
-              <img src={process.env.REACT_APP_API_URL + '/' + img + '.min.jpeg'} alt="minImg" />
-            </picture>
+            })}
+          >
+            <ImgLazy src={img} alt='slider component' />
           </div>
         ))}
       </div>
-      <div className="photoBlock__mainPhoto">
-        <picture>
-          <source
-            srcSet={process.env.REACT_APP_API_URL + '/' + activeImg + '.max.webp'}
-            type="image/webp"
-          />
-          <img
-            src={process.env.REACT_APP_API_URL + '/' + activeImg + '.max.jpeg'}
-            alt="mainPotoItem"
-          />
-        </picture>
+      <div className='photoBlock__mainPhoto'>
+        <ImgLazy src={activeImg} alt='main component' />
       </div>
     </div>
   );

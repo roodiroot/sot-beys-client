@@ -1,63 +1,74 @@
-import AdminPanelPage from '../pages/AdminPanelPage';
-import AuthPage from '../pages/AuthPage';
-import BrandLine from '../pages/BrandLine';
-import CartPage from '../pages/CartPage';
-import CatalogPage from '../pages/CatalogPage';
-import GideSizePage from '../pages/GideSizePage';
-import Main from '../pages/Main';
-import PersonalAreaPage from '../pages/PersonalAreaPage';
-import ShopPage from '../pages/ShopPage';
+import AdminPanelPage from "../pages/AdminPanelPage";
+import AuthPage from "../pages/AuthPage";
+import BrandLine from "../pages/BrandLine";
+import CartPage from "../pages/CartPage";
+import CatalogPage from "../pages/CatalogPage";
+import GideSizePage from "../pages/GideSizePage";
+import Main from "../pages/Main";
+import PersonalAreaPage from "../pages/PersonalAreaPage";
+import ShopPage from "../pages/ShopPage";
+import AboutPage from "../pages/about-page";
+import ContactsPage from "../pages/contacts-page";
+import PersonalPolicy from "../pages/personal-policy";
 
 export const allPublicPathes = [
   {
-    path: '/',
+    path: "/",
     component: <Main />,
   },
   {
-    path: '/shop',
-    component: <ShopPage />,
+    path: "/about",
+    component: <AboutPage />,
   },
   {
-    path: '/registration',
+    path: "/contacts",
+    component: <ContactsPage />,
+  },
+  {
+    path: "/registration",
     component: <AuthPage />,
   },
   {
-    path: '/login',
+    path: "/login",
     component: <AuthPage />,
   },
   {
-    path: '/catalog-category',
+    path: "/catalog-category",
     component: <CatalogPage />,
   },
   {
-    path: '/gaid-size',
+    path: "/gaid-size",
     component: <GideSizePage />,
   },
   {
-    path: '/brand-line',
+    path: "/brand-line",
     component: <BrandLine />,
   },
   {
-    path: '/cart',
+    path: "/cart",
     component: <CartPage />,
+  },
+  {
+    path: "/personal-policy",
+    component: <PersonalPolicy />,
   },
 ];
 export const authPathes = [
   {
-    path: '/admin',
+    path: "/admin",
     component: <AdminPanelPage />,
   },
   {
-    path: '/personal-area',
+    path: "/personal-area",
     component: <PersonalAreaPage />,
   },
 ];
 
 export const menuHeaderPathes = [
   {
-    path: '/',
+    path: "/",
     component: <Main />,
-    name: 'Главная',
+    name: "Главная",
   },
   // {
   //   path: '/shop',
@@ -65,19 +76,29 @@ export const menuHeaderPathes = [
   //   name: 'Магазин',
   // },
   {
-    path: '/catalog-category',
+    path: "/catalog-category",
     component: <CatalogPage />,
-    name: 'Каталог',
+    name: "Каталог",
   },
   {
-    path: '/gaid-size',
-    component: <GideSizePage />,
-    name: 'Гид по размерам',
-  },
-  {
-    path: '/brand-line',
+    path: "/brand-line",
     component: <BrandLine />,
-    name: 'Брендовая линейка',
+    name: "Модели",
+  },
+  // {
+  //   path: "/gaid-size",
+  //   component: <GideSizePage />,
+  //   name: "Гид по размерам",
+  // },
+  {
+    path: "/about",
+    component: <AboutPage />,
+    name: "О нас",
+  },
+  {
+    path: "/contacts",
+    component: <ContactsPage />,
+    name: "Контакты",
   },
   // {
   //   path: '/card-item',
